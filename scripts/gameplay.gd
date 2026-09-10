@@ -54,7 +54,6 @@ var next_bug_crowd_milestone: int = 500
 
 func _ready() -> void:
 	GameState.reset_run()
-	SoundFX.play_music(1.5)
 	top_bar.visible = true
 	game_over_panel.visible = false
 	
@@ -421,7 +420,6 @@ func _on_player_died() -> void:
 	if is_game_over:
 		return
 	is_game_over = true
-	SoundFX.fade_out_music(1.0)
 	
 	var timer = get_tree().create_timer(1.25)
 	timer.timeout.connect(func():
@@ -440,7 +438,6 @@ func _on_restart_pressed() -> void:
 
 func _on_menu_pressed() -> void:
 	SoundFX.play_hop()
-	SoundFX.stop_music()
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 
 func _unhandled_input(event: InputEvent) -> void:

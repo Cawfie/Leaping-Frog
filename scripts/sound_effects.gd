@@ -10,65 +10,23 @@ var sfx_break: AudioStream = preload("res://assets/sounds/break.wav")
 var sfx_powerup: AudioStream = preload("res://assets/sounds/powerup.wav")
 var sfx_game_over: AudioStream = preload("res://assets/sounds/game_over.wav")
 var sfx_shoot: AudioStream = preload("res://assets/sounds/shoot.wav")
-var bgm_stream: AudioStream = preload("res://assets/sounds/High_Above_the_Reeds.mp3")
-
 # Master volume attenuation - soft, relaxing background levels
 const MASTER_VOLUME_DB: float = -8.0
-const MUSIC_TARGET_VOLUME_DB: float = -12.0
-
-var music_player: AudioStreamPlayer = null
-var music_tween: Tween = null
 
 func _ready() -> void:
-	if bgm_stream is AudioStreamMP3:
-		bgm_stream.loop = true
-	music_player = AudioStreamPlayer.new()
-	music_player.stream = bgm_stream
-	music_player.volume_db = -60.0
-	add_child(music_player)
+	pass
 
-func play_music(fade_in_duration: float = 1.2) -> void:
-	if not GameState.sound_enabled or not music_player:
-		return
-	if music_tween and music_tween.is_valid():
-		music_tween.kill()
-		
-	if not music_player.playing:
-		music_player.volume_db = -60.0
-		music_player.play()
-		
-	music_tween = create_tween()
-	music_tween.tween_property(music_player, "volume_db", MUSIC_TARGET_VOLUME_DB, fade_in_duration)
+func play_music(_fade_in_duration: float = 1.2) -> void:
+	pass
 
-func fade_out_music(fade_out_duration: float = 1.0) -> void:
-	if not music_player or not music_player.playing:
-		return
-	if music_tween and music_tween.is_valid():
-		music_tween.kill()
-		
-	music_tween = create_tween()
-	music_tween.tween_property(music_player, "volume_db", -60.0, fade_out_duration)
-	music_tween.tween_callback(func():
-		if music_player and music_player.volume_db <= -58.0:
-			music_player.stop()
-	)
+func fade_out_music(_fade_out_duration: float = 1.0) -> void:
+	pass
 
 func stop_music() -> void:
-	if music_tween and music_tween.is_valid():
-		music_tween.kill()
-	if music_player:
-		music_player.stop()
-		music_player.volume_db = -60.0
+	pass
 
 func update_music_state() -> void:
-	if not music_player:
-		return
-	if not GameState.sound_enabled:
-		stop_music()
-	else:
-		var cur = get_tree().current_scene
-		if cur and cur.name == "Gameplay":
-			play_music(1.2)
+	pass
 
 func play_hop() -> void:
 	if not GameState.sound_enabled: return
