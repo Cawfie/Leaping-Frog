@@ -1,4 +1,4 @@
-﻿# 🐸 Froggy Leap (Leaping Frog)
+# 🐸 Froggy Leap (Leaping Frog)
 
 A delightful, high-altitude vertical arcade jumper developed in **Godot Engine 4**. Help Froggy leap through an endless, perilous forest canopy, bouncing on mushroom springs, snagging tasty bugs, and dodging hazards as the camera rises beneath you!
 
@@ -6,14 +6,16 @@ A delightful, high-altitude vertical arcade jumper developed in **Godot Engine 4
 
 ## 📥 Direct Downloads
 
-Download and play immediately on PC or Android:
+Click below to download and play immediately on PC or Android:
 
-* 🪟 **[Direct Download Windows (.exe)](builds/windows/FroggyLeap.exe?raw=true)** &nbsp; *(Standalone 64-bit Executable &bull; ~122 MB)*
-* 📱 **[Direct Download Android (.apk)](builds/android/FroggyLeap.apk?raw=true)** &nbsp; *(Signed Universal APK &bull; ~72 MB)*
+* 🪟 **[Direct Download Windows (.exe)](https://github.com/Cawfie/Leaping-Frog/raw/master/builds/windows/FroggyLeap.exe)** &nbsp; *(Standalone 64-bit Executable &bull; ~122 MB)*
+  * *Direct CDN Mirror*: [Download Windows (.exe)](https://media.githubusercontent.com/media/Cawfie/Leaping-Frog/master/builds/windows/FroggyLeap.exe)
+* 📱 **[Direct Download Android (.apk)](https://github.com/Cawfie/Leaping-Frog/raw/master/builds/android/FroggyLeap.apk)** &nbsp; *(Signed Universal APK &bull; ~72 MB)*
+  * *Direct CDN Mirror*: [Download Android (.apk)](https://media.githubusercontent.com/media/Cawfie/Leaping-Frog/master/builds/android/FroggyLeap.apk)
 
 > **Quick Start**:
-> - **Windows**: Download [FroggyLeap.exe](builds/windows/FroggyLeap.exe?raw=true) and double-click to play immediately. No installation or setup required!
-> - **Android**: Download [FroggyLeap.apk](builds/android/FroggyLeap.apk?raw=true) directly to your Android device, tap to install, and launch.
+> - **Windows**: Download [`FroggyLeap.exe`](https://github.com/Cawfie/Leaping-Frog/raw/master/builds/windows/FroggyLeap.exe) and double-click to play immediately. No installation or setup required!
+> - **Android**: Download [`FroggyLeap.apk`](https://github.com/Cawfie/Leaping-Frog/raw/master/builds/android/FroggyLeap.apk) directly to your Android device, tap to install, and launch.
 
 ---
 
