@@ -37,15 +37,6 @@ Download and play immediately on PC or Android:
 - 💖 **Heart Moth**: +25 Points & Heals +1 Heart (Rare life saver)
 - 🎉 **500m Milestone Swarms**: Every 500 meters, celebrate with a festive feast of 5–6 bonus flies and butterflies!
 
-### 🎵 High Quality Audio & Polish
-- **Atmospheric Looped BGM**: Seamless background track (*High Above the Reeds*) featuring a 1.5s fade-in on start and 1.0s fade-out on game over.
-- **Arcade Death Animation**: Expressive red hurt frog hop and tumble sequence when all hearts are lost.
-- **Pixel-Perfect Alignment**: Precise hitboxes ensuring Froggy bounces directly on the bark surface.
-
-### ⚡ Ultra-Smooth Multi-Refresh Display Optimization
-- **Uncapped FPS**: Dynamically syncs with your screen's native refresh rate (**30 Hz, 60 Hz, 90 Hz, 120 Hz, 144 Hz**).
-- **Physics Interpolation**: 60 Hz deterministic simulation coupled with 2D interpolation for buttery smooth movement with zero frame jitter or physics drift.
-
 ---
 
 ## 🎮 Controls
@@ -55,15 +46,12 @@ Download and play immediately on PC or Android:
 | :--- | :--- | :--- |
 | **Move Left** | A | Left Arrow |
 | **Move Right** | D | Right Arrow |
-| **Jump** | Space | W / Up Arrow |
-| **Eat Bug** | Left Click | E |
 
 *(Configurable in Settings: Choose between "A/D + Arrows", "A/D Only", or "Arrows Only")*
 
 ### Mobile (Android)
 - **Touch Mode (Default)**: Tap or hold the left half of the screen to move left, right half to move right.
-- **Tilt Mode**: Use your device's accelerometer to steer Froggy by tilting your phone.
-- **Sensitivity Slider**: Custom tilt sensitivity (Low, Medium, High) in the settings menu.
+
 
 ---
 
