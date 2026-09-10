@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c5e2r9w1m4p7k"]
+
+[ext_resource type="Script" path="res://scripts/player_frog.gd" id="1_frog"]
+[ext_resource type="Texture2D" path="res://assets/sprites/frog_spritesheet.png" id="2_sheet"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_frog"]
+size = Vector2(14, 11)
+
+[node name="PlayerFrog" type="CharacterBody2D"]
+collision_mask = 2
+script = ExtResource("1_frog")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_sheet")
+hframes = 18
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 2.5)
+shape = SubResource("RectangleShape2D_frog")

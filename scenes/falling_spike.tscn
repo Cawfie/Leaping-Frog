@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://f4spk8v4n9q2s"]
+
+[ext_resource type="Script" path="res://scripts/falling_spike.gd" id="1_spk"]
+[ext_resource type="Texture2D" path="res://assets/sprites/spike_falling.png" id="2_tex"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_spk"]
+size = Vector2(7, 15)
+
+[node name="FallingSpike" type="Area2D"]
+collision_layer = 0
+collision_mask = 1
+monitorable = false
+script = ExtResource("1_spk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.022, 0.022)
+texture = ExtResource("2_tex")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_spk")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

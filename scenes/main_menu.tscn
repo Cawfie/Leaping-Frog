@@ -1,0 +1,113 @@
+[gd_scene format=3 uid="uid://d3m8k2n9v1q7w"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_menu"]
+[ext_resource type="Texture2D" path="res://assets/sprites/menu_background.png" id="2_bg"]
+[ext_resource type="Texture2D" path="res://assets/sprites/btn_coffee_normal.png" id="3_coffee_normal"]
+[ext_resource type="Texture2D" path="res://assets/sprites/btn_coffee_lit.png" id="4_coffee_lit"]
+[ext_resource type="Texture2D" path="res://assets/sprites/btn_start_normal.png" id="32_start_normal"]
+[ext_resource type="Texture2D" path="res://assets/sprites/btn_start_pressed.png" id="33_start_pressed"]
+[ext_resource type="Texture2D" path="res://assets/sprites/btn_sound_on.png" id="34_sound_on"]
+[ext_resource type="Texture2D" path="res://assets/sprites/btn_sound_off.png" id="35_sound_off"]
+[ext_resource type="Texture2D" path="res://assets/sprites/btn_sound_on_lit.png" id="39_sound_on_lit"]
+[ext_resource type="Texture2D" path="res://assets/sprites/btn_sound_off_lit.png" id="40_sound_off_lit"]
+[ext_resource type="Texture2D" path="res://assets/sprites/scoreboard.png" id="41_scoreboard"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_menu")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bg")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Scoreboard" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 5.0
+offset_right = 120.0
+offset_bottom = 44.0
+texture = ExtResource("41_scoreboard")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DigitsContainer" type="HBoxContainer" parent="Scoreboard"]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 13.0
+offset_right = 110.0
+offset_bottom = 24.0
+theme_override_constants/separation = 1
+
+[node name="CoffeeBtn" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -42.0
+offset_top = 7.0
+offset_right = -8.0
+offset_bottom = 39.0
+grow_horizontal = 0
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("3_coffee_normal")
+texture_pressed = ExtResource("4_coffee_lit")
+texture_hover = ExtResource("4_coffee_lit")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="StartBtn" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.0
+offset_top = 20.0
+offset_right = 47.0
+offset_bottom = 52.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("32_start_normal")
+texture_pressed = ExtResource("33_start_pressed")
+texture_hover = ExtResource("33_start_pressed")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="AudioBtn" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -47.0
+offset_top = 64.0
+offset_right = 47.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("34_sound_on")
+texture_pressed = ExtResource("39_sound_on_lit")
+texture_hover = ExtResource("39_sound_on_lit")
+ignore_texture_size = true
+stretch_mode = 5
+
+[connection signal="pressed" from="CoffeeBtn" to="." method="_on_coffee_pressed"]
+[connection signal="pressed" from="StartBtn" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="AudioBtn" to="." method="_on_audio_toggled"]
+

@@ -1,0 +1,9 @@
+﻿# Godot 4+ cache & editor files
+.godot/
+*.tmp
+*.log
+
+# Keep builds explicitly
+!builds/
+!builds/windows/FroggyLeap.exe
+!builds/android/FroggyLeap.apk

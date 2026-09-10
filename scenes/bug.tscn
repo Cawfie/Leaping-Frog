@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://f4k8n2m9q1v7s"]
+
+[ext_resource type="Script" path="res://scripts/bug.gd" id="1_bug"]
+[ext_resource type="Texture2D" path="res://assets/sprites/housefly_strip5.png" id="2_fly"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bug"]
+radius = 8.0
+
+[node name="Bug" type="Area2D"]
+collision_layer = 4
+collision_mask = 1
+script = ExtResource("1_bug")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_fly")
+hframes = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_bug")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+
