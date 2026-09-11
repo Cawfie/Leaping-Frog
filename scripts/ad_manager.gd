@@ -1,4 +1,4 @@
-﻿extends Node
+extends Node
 
 # AdManager: Central controller for Google AdMob mobile ads & Remove Ads Paywall
 # STRICT POLICY:
@@ -16,8 +16,8 @@ const LIVE_APP_OPEN_ID: String = "ca-app-pub-3382349314599719/5468303262"
 const TEST_INTERSTITIAL_ID: String = "ca-app-pub-3940256099942544/1033173712"
 const TEST_APP_OPEN_ID: String = "ca-app-pub-3940256099942544/9257395921"
 
-# Set to true while app is Under Review by Google, flip to false for live production revenue
-@export var use_test_ads: bool = true
+# Set to false for live production revenue (automatically starts showing once Google approves)
+@export var use_test_ads: bool = false
 
 var deaths_since_last_ad: int = 0
 const DEATHS_BETWEEN_ADS: int = 3 # Only show an ad every 3 game overs
