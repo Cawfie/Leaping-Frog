@@ -8,13 +8,16 @@
 
 config_version=5
 
+[admob]
+
+general/android/app_id="ca-app-pub-3382349314599719~5296716751"
+
 [application]
 
 config/name="Froggy Leap"
 run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.png"
-run/max_fps=0
 
 [autoload]
 
@@ -30,9 +33,11 @@ window/size/window_width_override=540
 window/size/window_height_override=960
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
-window/stretch/scale_mode="fractional"
 window/handheld/orientation=1
-window/vsync/vsync_mode=1
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/admob/plugin.cfg")
 
 [input]
 
@@ -62,17 +67,19 @@ eat={
 ]
 }
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://addons/admob/gdscript/sample/translations/admob_sample.en.translation", "res://addons/admob/gdscript/sample/translations/admob_sample.pt_BR.translation", "res://addons/admob/gdscript/sample/translations/admob_sample.es.translation", "res://addons/admob/gdscript/sample/translations/admob_sample.zh_CN.translation", "res://addons/admob/gdscript/sample/translations/admob_sample.ja.translation")
+
 [physics]
 
 common/physics_interpolation=true
-common/physics_ticks_per_second=60
-common/max_physics_steps_per_frame=8
 
 [rendering]
 
-textures/vram_compression/import_etc2_astc=true
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
 environment/defaults/default_clear_color=Color(0.04, 0.09, 0.08, 1)
 2d/snap/snap_2d_transforms_to_pixel=true
